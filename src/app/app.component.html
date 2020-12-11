@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row" style="">
+    <div class="mx-auto" style="width: 680px;margin-left: 250px;" >
+      <form>
+      <label for="name">Name : </label>
+      <input type="text" name="name"#name id="name" class="form-control" value="" title="" required="required"><br>
+      <label for="description">Description : </label>
+      <input type="text" name="description"#description id="description" class="form-control" value="" title="" required="required"><br>
+      <label for="price">Price : </label>
+      <input type="text" name="price" id="price"#price class="form-control" value="" title="" required="required"><br>
+      <label for="imgPath">ImgPath : </label>
+      <input type="text" name="imgPath"#imgPath id="imgPath" class="form-control" value="" title="" required="required"><br><br>
+        <button (click)="addRoom(name.value,description.value,price.value,imgPath.value)" type="button" class="btn btn-success" style="margin-left: 600px;">Add Rooms</button>
+        <br><br>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+  <app-room-list [rooms]="rooms"></app-room-list>
+  </div>
+</div>
+
+

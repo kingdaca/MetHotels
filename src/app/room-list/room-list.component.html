@@ -1,0 +1,20 @@
+<div class="row" style="">
+  <div class="mx-auto" style="width: 680px;margin-left: 250px;" >
+    <h3>Search a room with a price below the entered value : </h3>
+    <input type="text" name="name" id="search" class="form-control" [(ngModel)]="textSearch" value="">
+    <br>
+    <button class="btn btn-warning" style="margin-left: 600px;" (click)="randomize()">RANDOMIZE</button>
+    <br> <br>
+  </div>
+</div>
+<div class="row">
+  <ul class="list-group col-5 mx-auto">
+    <app-room-item *ngFor="let room of rooms
+    | filter:textSearch
+    " [room]="room"
+                   (roomToDelete)="deleteRoom($event)"
+                   (roomToChane)="changeRoom($event)"
+    >
+    </app-room-item>
+  </ul>
+</div>

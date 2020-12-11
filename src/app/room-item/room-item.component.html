@@ -1,0 +1,12 @@
+<li id="list" class="list-group ">
+      <div>
+      <img [src]="room.imgPath" [alt]="room.name">
+      </div>
+      <div>
+      <h4>{{room.name}}</h4>
+        <h4>Price per day : {{room.price}}e</h4>
+      <p>{{room.description}}</p>
+        <button (click)="deleteProduct()" class="btn btn-danger" style="margin: 10px">Delete</button>
+        <button (click)="changeProduct()" class="btn btn-primary">Chane</button>
+      </div>
+</li>
